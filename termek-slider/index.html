@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="thumb">
+            <li>
+                <a href="img/iphonebig1.jpg" target="imageBox">
+                    <img src="img/iphonethumb1.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="img/iphonebig2.jpg" target="imageBox">
+                    <img src="img/iphonethumb2.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="img/iphonebig3.jpg" target="imageBox">
+                    <img src="img/iphonethumb3.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="img/iphonebig4.jpg" target="imageBox">
+                    <img src="img/iphonethumb4.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+
+        <div class="imageBox">
+            <img src="img/iphonebig1.jpg" alt="">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            $(".thumb a").mouseover(function (e) {
+
+                e.preventDefault();
+
+                $(".imageBox img").attr("src", $(this).attr("href"));
+
+
+
+            })
+
+        })
+    </script>
+</body>
+
+</html>
